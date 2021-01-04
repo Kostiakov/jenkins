@@ -10,6 +10,7 @@ pipeline {
 		
 		stage ("stage") {
 			steps {
+				sh 'docker stop jenkins-demo || true && docker rm jenkins-demo || true'
 				sh 'docker build -t jenkins-demo .'
 			}
 		}
