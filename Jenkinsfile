@@ -16,7 +16,7 @@ pipeline {
 		
 		stage ("deploy") {
 			steps {
-				sh 'docker run -p 8081:8081 jenkins-demo'
+				sh 'docker run -d -p 8081:8081 jenkins-demo'
 			}
 		}
 	}
